@@ -1,10 +1,3 @@
-# Goose to Zerolog
-
-Adapter from plessy goose to zerolog.
-
-Example usage:
-
-```go
 package main
 
 import (
@@ -17,5 +10,3 @@ func main() {
 	adapter := adapter.Get(&zerolog.Logger{})
 	goose.SetLogger(adapter)
 }
-
-```
