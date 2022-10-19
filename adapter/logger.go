@@ -1,6 +1,8 @@
 package adapter
 
 import (
+	"fmt"
+
 	"github.com/rs/zerolog"
 )
 
@@ -13,21 +15,21 @@ type adapter struct {
 }
 
 func (s *adapter) Fatal(v ...interface{}) {
-	panic("not implemented") // TODO: Implement
+	s.logger.Fatal().Msg(fmt.Sprintln(v...))
 }
 
 func (s *adapter) Fatalf(format string, v ...interface{}) {
-	panic("not implemented") // TODO: Implement
+	s.logger.Fatal().Msgf(format, v...)
 }
 
 func (s *adapter) Print(v ...interface{}) {
-	panic("not implemented") // TODO: Implement
+	s.logger.Info().Msg(fmt.Sprintln(v...))
 }
 
 func (s *adapter) Println(v ...interface{}) {
-	panic("not implemented") // TODO: Implement
+	s.logger.Info().Msg(fmt.Sprintln(v...))
 }
 
 func (s *adapter) Printf(format string, v ...interface{}) {
-	panic("not implemented") // TODO: Implement
+	s.logger.Info().Msgf(format, v...)
 }
