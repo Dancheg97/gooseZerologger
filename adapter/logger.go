@@ -27,7 +27,7 @@ func (s *adapter) Print(v ...interface{}) {
 }
 
 func (s *adapter) Println(v ...interface{}) {
-	s.logger.Info().Msg(fmt.Sprintln(v...))
+	s.logger.Info().Msg(fmt.Sprint(v...))
 }
 
 func (s *adapter) Printf(format string, v ...interface{}) {
