@@ -15,7 +15,7 @@ type adapter struct {
 }
 
 func (s *adapter) Fatal(v ...interface{}) {
-	s.logger.Fatal().Msg(fmt.Sprintln(v...))
+	s.logger.Fatal().Msg(fmt.Sprint(v...))
 }
 
 func (s *adapter) Fatalf(format string, v ...interface{}) {
@@ -23,7 +23,7 @@ func (s *adapter) Fatalf(format string, v ...interface{}) {
 }
 
 func (s *adapter) Print(v ...interface{}) {
-	s.logger.Info().Msg(fmt.Sprintln(v...))
+	s.logger.Info().Msg(fmt.Sprint(v...))
 }
 
 func (s *adapter) Println(v ...interface{}) {
