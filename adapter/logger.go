@@ -6,6 +6,7 @@ import (
 	"github.com/rs/zerolog"
 )
 
+// Transform zerolog logger to goose compatible logger with by using adapter.
 func Get(logger *zerolog.Logger) *adapter {
 	return &adapter{logger: logger}
 }
