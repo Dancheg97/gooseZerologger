@@ -19,7 +19,7 @@ func (s *adapter) Fatal(v ...interface{}) {
 }
 
 func (s *adapter) Fatalf(format string, v ...interface{}) {
-	s.logger.Fatal().Msgf(format, v...)
+	s.logger.Fatal().Msgf(fmt.Sprintf(format, v...))
 }
 
 func (s *adapter) Print(v ...interface{}) {
@@ -31,5 +31,5 @@ func (s *adapter) Println(v ...interface{}) {
 }
 
 func (s *adapter) Printf(format string, v ...interface{}) {
-	s.logger.Info().Msgf(format, v...)
+	s.logger.Info().Msg(fmt.Sprintf(format, v...))
 }
