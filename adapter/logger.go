@@ -33,7 +33,7 @@ func (s *adapter) Println(v ...interface{}) {
 }
 
 func (s *adapter) Printf(format string, v ...interface{}) {
-	if strings.HasSuffix(format, `\n`) {
+	if strings.HasSuffix(format, "\n") {
 		format = format[:len(format)-2]
 	}
 	s.logger.Info().Msg(fmt.Sprintf(format, v...))
