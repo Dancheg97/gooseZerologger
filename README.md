@@ -1,6 +1,17 @@
 # Goose to Zerolog
 
-Adapter from plessy goose to zerolog.
+Adapter from plessy goose to zerolog. Allows to transform zerolog `Logger` to
+`goose` compatible logging tool, by using tiny adapter.
+
+# Installation
+
+Go get:
+
+```cmd
+go get github.com/Dancheg97/gooseZerologger
+```
+
+# Usage
 
 Example usage:
 
